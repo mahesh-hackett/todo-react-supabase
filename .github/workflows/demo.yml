@@ -9,15 +9,14 @@ jobs:
     runs-on: self-hosted
 
     steps:
-      - uses: actions/checkout@v4
-
-      - name: Verify VPN server
+      - name: Pull latest code on server
         run: |
-          echo "Runner is inside VPN"
-          hostname
-          ip a || ifconfig
+          set -e
+          cd /home/ubuntu/todo-react-supabase
+          git fetch origin
+          git pull origin main
 
-      - name: Demo step
+      - name: Post-deploy confirmation
         run: |
-          echo "CI works 🚀"
+          echo "Deployment completed on server 🚀"
           date
