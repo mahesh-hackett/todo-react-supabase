@@ -1,0 +1,23 @@
+name: VPN Server CI Demo
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  vpn-job:
+    runs-on: self-hosted
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Verify VPN server
+        run: |
+          echo "Runner is inside VPN"
+          hostname
+          ip a || ifconfig
+
+      - name: Demo step
+        run: |
+          echo "CI works 🚀"
+          date
