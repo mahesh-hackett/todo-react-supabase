@@ -19,7 +19,7 @@ function Home() {
       <div className="pt-12 pb-8 px-4">
         <div className="max-w-7xl mx-auto">
           <h1 className="text-4xl font-bold text-white mb-2">My Tasks</h1>
-          <p className="text-slate-400">Organize your work and life, finally. Testing CI/CD 1.0.0</p>
+          <p className="text-slate-400">Organize your work and life, finally. Testing CI/CD 1.0.1</p>
         </div>
       </div>
 
